@@ -9,7 +9,5 @@ char a = sc.next().charAt(0);
  
 System.out.print("ASCII = "+(int)a);	 
  
-
-
 }
 }

@@ -15,8 +15,6 @@ System.out.print("Enter T: ");
 
 System.out.print("Simple Interest: "+si);
  
- 
-
 
 }
 }
