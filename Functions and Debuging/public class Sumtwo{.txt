@@ -1,0 +1,10 @@
+public class Sumtwo{
+public static int sum(int a ,int b){
+
+     int c = a +b;
+return c;
+}
+public static void main(String args[]){
+sum(1,2);
+}
+}
