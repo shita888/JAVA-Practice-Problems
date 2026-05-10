@@ -1,3 +1,4 @@
+package Arrays_Practise;
 import java.util.Scanner;
 public  class CountPN{
 public static void main(String args[]){

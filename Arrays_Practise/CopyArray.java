@@ -1,5 +1,5 @@
+package Arrays_Practise;
 import java.util.Scanner;
- 
 public class CopyArray{
 public static void main(String args[]){
 
