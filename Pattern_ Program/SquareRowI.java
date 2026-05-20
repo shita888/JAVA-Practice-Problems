@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class SquareRowI {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        run(sc);
+        sc.close();
+    }
+
+    public static void run(Scanner sc) {
+        System.out.print("Enter Number: ");
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
+}
