@@ -144,3 +144,57 @@ for(int i=0;i<arr.length;i++){
     }
  
 }
+
+//..................
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        int j;
+        for(int i=0;i<arr.length;i++){
+          System.out.print(arr[i]+" ");
+         }
+       
+      int target=3;
+      for(int i=0;i<arr.length;i++){
+          if(arr[i]==target){
+              System.out.println("T:"+i);
+          }else{  
+                    for( j=0;j<arr.length;j++){
+                      if(target < arr[j]){ 
+                        //   System.out.println("Index:"+ j);
+                         break;
+                        } 
+                     } 
+                       
+             } 
+          
+      }
+      return j;
+    }
+    
+    
+    public static void main(String[] args) {
+     int nums[]={1,2,4,5},target=3;
+     Solution s= new Solution();
+     
+     System.out.println( s.searchInsert(nums,target));
+    }
+    
+}
+//.............
+
+class Main {
+    
+    static void fun(int n){ 
+        if(n>1){
+         System.out.println("Sheetal");
+         fun(n-1);
+        }
+    } 
+    public static void main(String[] args) { 
+        
+     int n=15; 
+     fun(n);
+ 
+    
+    }
+}
