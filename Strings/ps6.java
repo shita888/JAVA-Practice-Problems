@@ -1,6 +1,5 @@
 //......Leetcode 989 problem
-public class ps6 { 
-
+ public class ps6 {
     public static int addToArrayForm(int[] nums, int k) {
         int n =0,cn=0,ck=0,k1=k,rem2;
         //......
@@ -38,9 +37,10 @@ public class ps6 {
         System.out.println("ele:"+ck);
         System.out.println("ele:"+cn);
         int m = rev;
-        if(ck>cn){
-             int nums1[] = new int[ck];
-                     int i=0;
+        if(ck>=cn){
+            if(ck==cn){
+             int nums1[] = new int[ck+1]; 
+                  int i=0;
                     while(m>0){
                         rem1 = m%10; 
                         nums1[i] = rem1;
@@ -51,6 +51,21 @@ public class ps6 {
                     for(int j=0;j<nums1.length;j++){ 
                         System.out.print(nums1[j]+" ");
                     }   
+            }else{
+             int nums1[] = new int[ck]; 
+                  int i=0;
+                    while(m>0){
+                        rem1 = m%10; 
+                        nums1[i] = rem1;
+                        i++;
+                        m=m/10;
+                    }
+                    System.out.println("Array:");
+                    for(int j=0;j<nums1.length;j++){ 
+                        System.out.print(nums1[j]+" ");
+                    }   
+            }
+                 
         }else{
                        int i=0; 
                         while(m>0){
@@ -70,8 +85,7 @@ public class ps6 {
         return m;
     }
     public static void main(String args[]){  
-        int num[]={1,2,0,0},k=10000;
+        int num[]={2,1,5},k=806;
         addToArrayForm(num,k);
     }
 }
-
