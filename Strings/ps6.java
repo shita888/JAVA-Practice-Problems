@@ -89,3 +89,58 @@
         addToArrayForm(num,k);
     }
 }
+//....................989
+class Solution {
+     public static List<Integer> addToArrayForm(int[] arr, int n) {
+         int rem,rem1,k;
+       
+       int i=arr.length-1;
+        while(n>0){
+            rem = n%10;
+            arr[i] = arr[i] + rem;
+            if(arr[i]>10){  
+                rem = arr[i]%10;
+                rem1 = arr[i]/10;
+                arr[i]=rem; 
+                arr[i-1] = arr[i-1]+rem1;  
+            }
+            n=n/10;
+            i--;
+        }
+         for(int j=0;j<arr.length;j++){
+            System.out.print(arr[j]+" "); 
+        }
+        int t=0,c=0;;
+        for(int j=0;j<arr.length;j++){ 
+            t = t*10+arr[j]; 
+        }
+        int r,t1 =t;;
+        System.out.println();
+        System.out.println(t);
+        while(t>0){
+            r = t%10; 
+            c++;
+            t=t/10;
+        }
+         
+        int brr[] = new int[c];
+        int l=brr.length-1;
+        while(t1>0){
+            r = t1%10; 
+            brr[l] = r;
+            t1=t1/10;
+            l--;
+        }
+          for(int j=0;j<brr.length;j++){
+            System.out.print(brr[j]+" "); 
+        }
+     }
+    public static void main(String[] args) {
+       int arr[]={2,1,5};
+       int n = 806;
+        
+        addToArrayForm(arr,n);
+       
+        
+    }
+}
