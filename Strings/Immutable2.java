@@ -1,25 +1,24 @@
-public class Immutable {
-    public static void main(String[] args) {
+public class Immutable2 {
+        public static void main(String[] args) {
         College c = new College("SVVV", "Sawer Road Indore");
-        Student s1 = new Student(123,"Shital",c);
-        // System.out.println(s1.getName());
-        // System.out.println(s1.getRoll());
+        Student s1 = new Student(123,"Shital",c); 
 
         System.out.println(s1.getCllg().name); 
-        s1.getCllg().name = "SBBB"; // Shalow copy
-        System.out.println(s1.getCllg().name); // the name of cllg is changed
+        s1.getCllg().name = "SBBB";    
+        System.out.println(s1.getCllg().name);// the name of cllg is not changed
 
-
-
+ 
         // String temp = s1.getCllg().name;  
-        // System.out.println(temp); 
+        // System.out.println(temp);
         // temp = "New SVVV";  
-        // System.out.println(temp);      
+        // System.out.println(temp);     
 
     }
 }
 
-// Not pure Immutable class
+
+//   Immutable class
+// defensive copy
 final class Student{
     private final int roll;
     private final String name;
@@ -28,7 +27,7 @@ final class Student{
     Student(int roll,String name,College cllg){
         this.roll = roll;
         this.name = name;
-        this.cllg= cllg;
+        this.cllg= new College(cllg.name,cllg.address); // Deep copy
     }
 
     int getRoll(){
@@ -38,7 +37,7 @@ final class Student{
         return this.name;
     }
     College getCllg(){
-        return this.cllg;
+        return new College(this.cllg.name,this.cllg.address);
     }
     
 }
