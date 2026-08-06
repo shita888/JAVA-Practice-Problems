@@ -24,20 +24,22 @@ public class Leetcode506 {
                 m1 = score[i];
             }
         }
-        System.out.println(m1);
+        // System.out.println(m1);
         for(int i=0;i<score.length;i++){
             if(m2<score[i] && score[i]<m1){
                 m2 = score[i];
             }
         }
-        System.out.println(m2);
+        // System.out.println(m2);
         for(int i=0;i<score.length;i++){
             if(m3<score[i] && score[i]<m1 && score[i]<m2){
                 m3 = score[i];
             }
         }
-        System.out.println(m3);
-        for(int i=0;i<arr.length;i++){
+        // System.out.println(m3);
+
+         
+        for(int i=0;i<arr.length;i++){ 
             if(arr[i] == m1){
                 srr[i] = "Gold";
             }
@@ -46,24 +48,21 @@ public class Leetcode506 {
             }
             else if(arr[i] == m3){
                 srr[i] = "Bronze";
-            }else{  
-                int c = 0 ;
-                Arrays.sort(arr,Collections.reverseOrder()); 
-                int n = 0;
-                for(int j=0;j<arr.length;j++){
-                    c++;
-                    if(arr[j]!=m1 && arr[j]!=m2 && arr[j]!=m3 && n!=j){  
-                        n = c;
-                        srr[i] = Integer.toString(c);   
-                        System.out.println(c); 
-                    }
-                    }  
             }
-
         }
 
+            // int c=0;
+            // Arrays.sort(arr,Collections.reverseOrder());  
+            // for(int j=0;j<arr.length;j++){
+            //     c++;
+            //     if(arr[j]!=m1 && arr[j]!=m2 && arr[j]!=m3){   
+                    // srr[j] = Integer.toString(c);   
+            //         System.out.println(c); 
+            //       }
+            //     }  
+
         for(int i=0;i<srr.length;i++){
-            // System.out.println(srr[i]);
+            System.out.println(srr[i]);
         }  
         for(int i=0;i<arr.length;i++){
             // System.out.println(arr[i]);
